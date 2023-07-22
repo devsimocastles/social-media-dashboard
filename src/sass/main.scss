@@ -1,0 +1,127 @@
+// flex mixin
+@mixin setFlex($fd,$ai, $jc, $wr){
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-wrap: $wr;
+}
+
+
+// INTER FONT IMPORT ////////////////////
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@import "var";
+
+// CSS RESET ////////////////////////////
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:not(h1, h2){
+  font-size: 14px;
+}
+
+.App{
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+
+  font-family: $font;
+  background-color: $DT_VeryDarkBlueBG;
+
+  .header{
+    width: 100%;
+    padding: 3em 1.5em;
+    background-color: $DT_VeryDarkBlueTOPBG;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    h1{
+      font-size: 23px;
+      color: $DT_White;
+      margin-bottom: .25em;
+    }
+    .total-followers{
+      color: $DT_DesaturatedBlue;
+      font-weight: 700;
+      padding-bottom: 1.5em;
+    }
+    .header-div-bar{
+      border: 1px solid $DT_DarkDesaturatedBlue;
+    }
+    .theme-switch-container{
+      @include setFlex(row, center, space-between, nowrap);
+      padding: 1.5em 0;
+      color: $DT_DesaturatedBlue;
+      font-weight: 700;
+      // SWITCH BUTTON STYLES
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+        input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          &:checked + .slider {
+            background:  linear-gradient(to right ,#ccc, #ccc);    
+          }
+          &:focus + .slider {
+            box-shadow: 0 0 1px #2196F3;
+          }
+          &:checked + .slider:before {
+            transform: translateX(26px);
+          }
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          -webkit-transition: .2s;
+          transition: .2s;
+          background: linear-gradient(to right ,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+          &.round {
+            border-radius: 34px;
+            &:before {
+              border-radius: 50%;
+            }
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: $DT_VeryDarkBlueTOPBG;
+            -webkit-transition: .4s;
+            transition: .4s;
+          }
+        }
+      }
+    
+      
+      /* Rounded sliders */
+
+    }
+  }
+}
+
+
+
+// .dt-primary-txt{
+//   color: $DT_White;
+// }
+
+// .dt-seconday-txt{
+//   color: $DT_DesaturatedBlue;
+// }

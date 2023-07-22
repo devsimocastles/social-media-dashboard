@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:not(h1, h2) {
+  font-size: 14px;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  background-color: hsl(230, 17%, 14%);
+}
+.App .header {
+  width: 100%;
+  padding: 3em 1.5em;
+  background-color: hsl(232, 19%, 15%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.App .header h1 {
+  font-size: 23px;
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.25em;
+}
+.App .header .total-followers {
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
+  padding-bottom: 1.5em;
+}
+.App .header .header-div-bar {
+  border: 1px solid hsl(228, 28%, 20%);
+}
+.App .header .theme-switch-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 1.5em 0;
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
+  /* Rounded sliders */
+}
+.App .header .theme-switch-container .switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.App .header .theme-switch-container .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.App .header .theme-switch-container .switch input:checked + .slider {
+  background: linear-gradient(to right, #ccc, #ccc);
+}
+.App .header .theme-switch-container .switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.App .header .theme-switch-container .switch input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.App .header .theme-switch-container .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.2s;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+.App .header .theme-switch-container .switch .slider.round {
+  border-radius: 34px;
+}
+.App .header .theme-switch-container .switch .slider.round:before {
+  border-radius: 50%;
+}
+.App .header .theme-switch-container .switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(232, 19%, 15%);
+  transition: 0.4s;
+}/*# sourceMappingURL=main.css.map */
