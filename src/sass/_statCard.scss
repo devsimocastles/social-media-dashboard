@@ -1,0 +1,73 @@
+@import "var";
+@import "mixin";
+
+
+.stat-card-container{
+    position: relative;
+    bottom: 2em;
+}
+
+.stat-card{
+    background-color:   $DT_DarkDesaturatedBlue;
+    min-width: 330px;
+    height: 215px;
+    margin-bottom: 2em;
+    border-radius: 5px;
+    position: relative;
+    .color-bar{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: absolute;
+        top: 0;
+        height: 5px;
+        width: 100%;
+        &.fb{
+            background-color: $Facebook;
+        }
+        &.ig{
+            background: $Instagram;
+        }
+        &.tw{
+            background-color: $Twitter;
+        }
+        &.yt{
+            background-color: $YouTube;
+        }
+    }
+    .content{
+        @include setFlex(column, center, space-evenly, wrap);
+        height: 100%;
+        padding-top: .5em;
+        .username{
+            @include setFlex(row, center, space-between, nowrap);
+            color: $DT_DesaturatedBlue;
+            font-weight: 800;
+            .social-icon{
+                margin-right: .5em;
+            }
+        }
+        .followers-cantity{
+            font-size: 48px;
+            color: $DT_White;
+            font-weight: 700;
+        }
+        .followers-title{
+            letter-spacing: 4px;
+            color: $DT_DesaturatedBlue;
+        }
+        .followers-status{
+            @include setFlex(row, center, space-between, nowrap);
+            font-weight: 800;
+            &.positive{
+                color: $LimeGreen;
+            }
+            &.negative{
+                color: $BrightRed;
+            }
+            img{
+                margin-right: .5em;
+            }
+        }
+    }
+}
+

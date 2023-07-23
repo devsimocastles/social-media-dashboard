@@ -1,7 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+.stat-card-container {
+  position: relative;
+  bottom: 2em;
+}
+
+.stat-card {
+  background-color: hsl(228, 28%, 20%);
+  min-width: 330px;
+  height: 215px;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  position: relative;
+}
+.stat-card .color-bar {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: absolute;
+  top: 0;
+  height: 5px;
+  width: 100%;
+}
+.stat-card .color-bar.fb {
+  background-color: hsl(208, 92%, 53%);
+}
+.stat-card .color-bar.ig {
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.stat-card .color-bar.tw {
+  background-color: hsl(203, 89%, 53%);
+}
+.stat-card .color-bar.yt {
+  background-color: hsl(348, 97%, 39%);
+}
+.stat-card .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 100%;
+  padding-top: 0.5em;
+}
+.stat-card .content .username {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  color: hsl(228, 34%, 66%);
+  font-weight: 800;
+}
+.stat-card .content .username .social-icon {
+  margin-right: 0.5em;
+}
+.stat-card .content .followers-cantity {
+  font-size: 48px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.stat-card .content .followers-title {
+  letter-spacing: 4px;
+  color: hsl(228, 34%, 66%);
+}
+.stat-card .content .followers-status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  font-weight: 800;
+}
+.stat-card .content .followers-status.positive {
+  color: hsl(163, 72%, 41%);
+}
+.stat-card .content .followers-status.negative {
+  color: hsl(356, 69%, 56%);
+}
+.stat-card .content .followers-status img {
+  margin-right: 0.5em;
+}
+
 .overview-card-container h2 {
   color: hsl(0, 0%, 100%);
-  padding: 2em 0;
+  padding: 0 0 1em 0;
 }
 .overview-card-container .overview-card {
   display: flex;

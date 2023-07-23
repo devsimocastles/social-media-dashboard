@@ -4,7 +4,7 @@
 .overview-card-container{
     h2{
         color: $DT_White;
-        padding: 2em 0;
+        padding: 0 0 1em 0;
     }
     .overview-card{
         @include setFlex(column, center, space-around, wrap);
