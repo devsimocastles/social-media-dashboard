@@ -1,17 +1,10 @@
-// flex mixin
-@mixin setFlex($fd,$ai, $jc, $wr){
-  display: flex;
-  flex-direction: $fd;
-  align-items: $ai;
-  justify-content: $jc;
-  flex-wrap: $wr;
-}
-
-
 // INTER FONT IMPORT ////////////////////
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 
+// SASS PARTIALS ////////////////////////
 @import "var";
+@import "mixin";
+@import "overviewCard";
 
 // CSS RESET ////////////////////////////
 *,
@@ -108,10 +101,6 @@
           }
         }
       }
-    
-      
-      /* Rounded sliders */
-
     }
   }
 }

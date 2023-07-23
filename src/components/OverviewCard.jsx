@@ -4,7 +4,7 @@ import "../sass/main.css"
 
 
 const OverviewCard = (props) => (
-    <div className="overview-card-container">
+    <div className="overview-card">
         <div className="row">
             <span className="stat-name">
                 {props.statName}

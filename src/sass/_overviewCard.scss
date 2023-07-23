@@ -1,0 +1,44 @@
+@import "var";
+@import "mixin";
+
+.overview-card-container{
+    h2{
+        color: $DT_White;
+        padding: 2em 0;
+    }
+    .overview-card{
+        @include setFlex(column, center, space-around, wrap);
+        padding: 1em 2em;
+        min-width: 330px;
+        height: 145px;
+        margin-bottom: 2em;
+        background-color: $DT_DarkDesaturatedBlue;
+        border-radius: 7px;
+        .row{
+            width: 100%;
+            @include setFlex(row, center, space-between, nowrap);
+            .stat-name{
+                color: $DT_DesaturatedBlue;
+                font-weight: 700;
+            }
+            img{
+                margin-right: .25em;
+            }
+            .stat-number{
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: $DT_White;
+            }
+            .overview-today{
+                @include setFlex(row, center, space-between, nowrap);
+                font-weight: 700;
+                &.positive{
+                    color: $LimeGreen;
+                }
+                &.negative{
+                    color: $BrightRed;
+                }
+            }
+        }
+    }
+}
