@@ -6,3 +6,14 @@
     justify-content: $jc;
     flex-wrap: $wr;
   }
+
+@mixin responsiveGrid($wid){
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($wid, 1fr));
+  column-gap: 2em;
+  justify-items: center;
+  width: 80%;
+  @media screen and (min-width:1026px) and (max-width:1439px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}

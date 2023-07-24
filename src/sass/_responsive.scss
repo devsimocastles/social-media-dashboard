@@ -1,0 +1,20 @@
+
+@media screen and (min-width: 1440px) {
+    /*
+     H2 OVERVIEW CARD POSITION FIX AT DESKTOP
+    */
+    h2.overview-container-title{
+    align-self: normal;
+    }
+
+    /*pushing up stat card and overview card container*/
+    .stat-card-container{
+        bottom: 4em;
+    }
+    
+    .overview-card-container{
+        position: relative;
+        bottom: 4em;
+    }
+    
+}

@@ -1,16 +1,24 @@
 @import "var";
 @import "mixin";
 
+h2.overview-container-title{
+    color: $DT_White;
+    padding: 1em 0;
+    width: 99%;
+    margin: 0 auto;
+}
 .overview-card-container{
-    h2{
-        color: $DT_White;
-        padding: 0 0 1em 0;
-    }
+    width: 80%;
+  .content{
+    @include responsiveGrid(250px);
+    margin: 0 auto;
+    width: 100% !important;
+  }
     .overview-card{
         @include setFlex(column, center, space-around, wrap);
         padding: 1em 2em;
-        min-width: 330px;
-        height: 145px;
+        height: 125px;
+        min-width: 250px;
         margin-bottom: 2em;
         background-color: $DT_DarkDesaturatedBlue;
         border-radius: 7px;

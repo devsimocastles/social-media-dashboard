@@ -2,72 +2,90 @@
 @import "mixin";
 
 
-.stat-card-container{
+.stat-card-container {
     position: relative;
     bottom: 2em;
+    @include responsiveGrid(250px);
+    place-content: center;
 }
 
-.stat-card{
-    background-color:   $DT_DarkDesaturatedBlue;
-    min-width: 330px;
+.stat-card {
+    background-color: $DT_DarkDesaturatedBlue;
+    max-width: 250px;
     height: 215px;
     margin-bottom: 2em;
     border-radius: 5px;
     position: relative;
-    .color-bar{
+    min-width: 250px;
+    &:last-of-type{
+        align-self: center;
+    }
+    .color-bar {
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
         position: absolute;
         top: 0;
         height: 5px;
         width: 100%;
-        &.fb{
+
+        &.fb {
             background-color: $Facebook;
         }
-        &.ig{
+
+        &.ig {
             background: $Instagram;
         }
-        &.tw{
+
+        &.tw {
             background-color: $Twitter;
         }
-        &.yt{
+
+        &.yt {
             background-color: $YouTube;
         }
     }
-    .content{
+
+    .content {
         @include setFlex(column, center, space-evenly, wrap);
         height: 100%;
         padding-top: .5em;
-        .username{
+
+        .username {
             @include setFlex(row, center, space-between, nowrap);
             color: $DT_DesaturatedBlue;
             font-weight: 800;
-            .social-icon{
+
+            .social-icon {
                 margin-right: .5em;
             }
         }
-        .followers-cantity{
+
+        .followers-cantity {
             font-size: 48px;
             color: $DT_White;
             font-weight: 700;
         }
-        .followers-title{
+
+        .followers-title {
             letter-spacing: 4px;
             color: $DT_DesaturatedBlue;
         }
-        .followers-status{
+
+        .followers-status {
             @include setFlex(row, center, space-between, nowrap);
             font-weight: 800;
-            &.positive{
+
+            &.positive {
                 color: $LimeGreen;
             }
-            &.negative{
+
+            &.negative {
                 color: $BrightRed;
             }
-            img{
+
+            img {
                 margin-right: .5em;
             }
         }
     }
 }
-

@@ -1,6 +1,8 @@
 import "./sass/main.css";
+import React, { useState, useEffect } from 'react'
 import StatsCard from "./components/StatsCard.jsx";
 import OverviewCard from "./components/OverviewCard";
+import Header from "./components/Header.jsx";
 
 // SOCIAL MEDIA ICONS //////////////////////////
 import fbIcon from "./images/icon-facebook.svg";
@@ -26,20 +28,11 @@ const chooseIcon = (icon) => {
 }
 
 function App() {
+
+
   return (
     <div className="App">
-      <header className="header">
-        <h1>Social Media Dashboard</h1>
-        <p className="total-followers">Total Followers: 23,004</p>
-        <hr className="header-div-bar"></hr>
-        <div className="theme-switch-container">
-          <span className="dark-mode">Dark Mode</span>
-          <label className="switch">
-            <input type="checkbox"></input>
-            <span className="slider round"></span>
-          </label>
-        </div>
-      </header>
+      <Header />
       <div className="stat-card-container">
         <StatsCard
           socialIcon="fb"
@@ -75,71 +68,73 @@ function App() {
         />
       </div>
       <div className="overview-card-container">
-        <h2>Overview - Today</h2>
-        <OverviewCard 
-        statName="Page Views"
-        socialIcon="fb"
-        statNumber="87"
-        arrowIcon="up"
-        positiveBalance={true}
-        percentaje="3"
-      />
-            <OverviewCard 
-        statName="Likes"
-        socialIcon="fb"
-        statNumber="52"
-        arrowIcon="down"
-        positiveBalance={false}
-        percentaje="2"
-      />
-            <OverviewCard 
-        statName="Likes"
-        socialIcon="ig"
-        statNumber="5462"
-        arrowIcon="up"
-        positiveBalance={true}
-        percentaje="2257"
-      />
-            <OverviewCard 
-        statName="Profile Views"
-        socialIcon="ig"
-        statNumber="52k"
-        arrowIcon="up"
-        positiveBalance={true}
-        percentaje="1375"
-      />
-            <OverviewCard 
-        statName="Retweets"
-        socialIcon="tw"
-        statNumber="117"
-        arrowIcon="up"
-        positiveBalance={true}
-        percentaje="303"
-      />
-            <OverviewCard 
-        statName="Likes"
-        socialIcon="tw"
-        statNumber="507"
-        arrowIcon="up"
-        positiveBalance={true}
-        percentaje="553"
-      />
-            <OverviewCard 
-        statName="Total Views"
-        socialIcon="yt"
-        statNumber="1407"
-        arrowIcon="down"
-        positiveBalance={false}
-        percentaje="12"
-      />
-            <OverviewCard 
-        statName="Likes"
-        socialIcon="yt"
-        statNumber="107"
-        arrowIcon="down"
-        positiveBalance={false}
-        percentaje="19"
-      />
+        <h2 className="overview-container-title">Overview - Today</h2>
+        <div className="content">
+          <OverviewCard
+            statName="Page Views"
+            socialIcon="fb"
+            statNumber="87"
+            arrowIcon="up"
+            positiveBalance={true}
+            percentaje="3"
+          />
+          <OverviewCard
+            statName="Likes"
+            socialIcon="fb"
+            statNumber="52"
+            arrowIcon="down"
+            positiveBalance={false}
+            percentaje="2"
+          />
+          <OverviewCard
+            statName="Likes"
+            socialIcon="ig"
+            statNumber="5462"
+            arrowIcon="up"
+            positiveBalance={true}
+            percentaje="2257"
+          />
+          <OverviewCard
+            statName="Profile Views"
+            socialIcon="ig"
+            statNumber="52k"
+            arrowIcon="up"
+            positiveBalance={true}
+            percentaje="1375"
+          />
+          <OverviewCard
+            statName="Retweets"
+            socialIcon="tw"
+            statNumber="117"
+            arrowIcon="up"
+            positiveBalance={true}
+            percentaje="303"
+          />
+          <OverviewCard
+            statName="Likes"
+            socialIcon="tw"
+            statNumber="507"
+            arrowIcon="up"
+            positiveBalance={true}
+            percentaje="553"
+          />
+          <OverviewCard
+            statName="Total Views"
+            socialIcon="yt"
+            statNumber="1407"
+            arrowIcon="down"
+            positiveBalance={false}
+            percentaje="12"
+          />
+          <OverviewCard
+            statName="Likes"
+            socialIcon="yt"
+            statNumber="107"
+            arrowIcon="down"
+            positiveBalance={false}
+            percentaje="19"
+          />
+        </div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { chooseIcon } from "../App";
 import "../sass/main.css";
 
+
 const StatsCard = (props) => (
     <div className="stat-card">
         <div className={"color-bar " + props.socialIcon}></div>

@@ -6,6 +6,9 @@
 @import "mixin";
 @import "statCard";
 @import "overviewCard";
+@import "responsive";
+@import "mobileHeader";
+@import "desktopHeader";
 
 // CSS RESET ////////////////////////////
 *,
@@ -29,25 +32,7 @@
   font-family: $font;
   background-color: $DT_VeryDarkBlueBG;
 
-  .header{
-    width: 100%;
-    padding: 3em 1.5em;
-    background-color: $DT_VeryDarkBlueTOPBG;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    h1{
-      font-size: 23px;
-      color: $DT_White;
-      margin-bottom: .25em;
-    }
-    .total-followers{
-      color: $DT_DesaturatedBlue;
-      font-weight: 700;
-      padding-bottom: 1.5em;
-    }
-    .header-div-bar{
-      border: 1px solid $DT_DarkDesaturatedBlue;
-    }
+
     .theme-switch-container{
       @include setFlex(row, center, space-between, nowrap);
       padding: 1.5em 0;
@@ -104,7 +89,7 @@
       }
     }
   }
-}
+
 
 
 
