@@ -9,6 +9,8 @@
 @import "responsive";
 @import "mobileHeader";
 @import "desktopHeader";
+@import "darkTheme";
+@import "lightTheme";
 
 // CSS RESET ////////////////////////////
 *,
@@ -30,13 +32,9 @@
   align-items: center;
 
   font-family: $font;
-  background-color: $DT_VeryDarkBlueBG;
-
-
     .theme-switch-container{
       @include setFlex(row, center, space-between, nowrap);
       padding: 1.5em 0;
-      color: $DT_DesaturatedBlue;
       font-weight: 700;
       // SWITCH BUTTON STYLES
       .switch {
@@ -60,6 +58,9 @@
         }
         .slider {
           position: absolute;
+          &:before {
+            background-color: $DT_VeryDarkBlueTOPBG;
+          }
           cursor: pointer;
           top: 0;
           left: 0;
@@ -81,7 +82,6 @@
             width: 16px;
             left: 4px;
             bottom: 4px;
-            background-color: $DT_VeryDarkBlueTOPBG;
             -webkit-transition: .4s;
             transition: .4s;
           }

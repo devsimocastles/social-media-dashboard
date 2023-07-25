@@ -2,7 +2,6 @@
 @import "mixin";
 
 h2.overview-container-title{
-    color: $DT_White;
     padding: 1em 0;
     width: 99%;
     margin: 0 auto;
@@ -20,13 +19,11 @@ h2.overview-container-title{
         height: 125px;
         min-width: 250px;
         margin-bottom: 2em;
-        background-color: $DT_DarkDesaturatedBlue;
         border-radius: 7px;
         .row{
             width: 100%;
             @include setFlex(row, center, space-between, nowrap);
             .stat-name{
-                color: $DT_DesaturatedBlue;
                 font-weight: 700;
             }
             img{
@@ -35,7 +32,6 @@ h2.overview-container-title{
             .stat-number{
                 font-size: 2.5rem;
                 font-weight: 700;
-                color: $DT_White;
             }
             .overview-today{
                 @include setFlex(row, center, space-between, nowrap);

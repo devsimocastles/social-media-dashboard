@@ -1,7 +1,6 @@
 .desktop-header{
     width: 100%;
     height: 35vh;
-    background-color: $DT_VeryDarkBlueTOPBG;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     @include setFlex(row, center, space-between, nowrap);
@@ -11,16 +10,11 @@
         margin: 0 auto;
         h1{
             font-size: 23px;
-            color: $DT_White;
             margin-bottom: .25em;
           }
           .desktop-total-followers{
-            color: $DT_DesaturatedBlue;
             font-weight: 700;
             padding-bottom: 1.5em;
-          }
-          .desktop-header-div-bar{
-            border: 1px solid $DT_DarkDesaturatedBlue;
           }
           span.dark-mode{
               margin-right: 1em;
@@ -29,3 +23,33 @@
 }
 
 
+#dark{
+  .desktop-header{
+    background-color: $DT_VeryDarkBlueTOPBG;
+  }
+  .content{
+    .desktop-total-followers{
+      color: $DT_DesaturatedBlue;
+      .theme-switch-container{
+        color: $DT_DesaturatedBlue;
+      }
+    }
+  }
+}
+
+#light{
+  .desktop-header{
+    background-color: $VeryPaleBlue;
+    .content{
+      h1{
+        color: $VeryDarkBlue;
+      }
+      .desktop-total-followers{
+        color: $DarkGrayishBlue;
+      }
+      .theme-switch-container{
+        color: $DarkGrayishBlue;
+      }
+    }
+  }
+}

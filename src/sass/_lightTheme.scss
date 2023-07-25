@@ -1,0 +1,30 @@
+#light{
+    background-color: $White;
+    .stat-card{
+        background-color: $LightGrayishBlue;
+        .content{
+            .username, .followers-title{
+                color: $DarkGrayishBlue;
+            }
+            .followers-cantity{
+                color: $VeryDarkBlue;
+            }
+        }
+    }
+    
+    h2.overview-container-title {
+        color: $VeryDarkBlue;
+      }
+    
+    .overview-card{
+        background-color: $LightGrayishBlue;
+        .row{
+            .stat-name{
+                color: $DarkGrayishBlue;
+            }
+            .stat-number{
+                color: $VeryDarkBlue;
+            }
+        }
+    }
+}

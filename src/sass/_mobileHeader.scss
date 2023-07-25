@@ -1,21 +1,56 @@
 .mobile-header{
     width: 100%;
     padding: 3em 1.5em;
-    background-color: $DT_VeryDarkBlueTOPBG;
+  
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     h1{
       font-size: 23px;
-      color: $DT_White;
       margin-bottom: .25em;
     }
     .mobile-total-followers{
-      color: $DT_DesaturatedBlue;
       font-weight: 700;
       padding-bottom: 1.5em;
     }
     .mobile-header-div-bar{
-      border: 1px solid $DT_DarkDesaturatedBlue;
+      border: 1px solid transparent;
     }
-  }
+}
 
+// DARK THEME
+#dark {
+  .mobile-header{
+    background-color: $DT_VeryDarkBlueTOPBG;
+  }
+  h1{
+    color: $DT_White;
+  }
+  .mobile-total-followers{
+    color: $DT_DesaturatedBlue;
+  }
+  .mobile-header-div-bar{
+    border: 1px solid $DT_DarkDesaturatedBlue;
+  }
+  .theme-switch-container{
+    color:$DT_DesaturatedBlue;
+  }
+}
+
+// LIGHT THEME
+#light {
+  .mobile-header{
+    background-color: $VeryPaleBlue;
+  }
+  h1{
+    color: $VeryDarkBlue;
+  }
+  .mobile-total-followers{
+    color: $DarkGrayishBlue;
+  }
+  .mobile-header-div-bar{
+    border: 1px solid #cccccca0;
+  }
+  .theme-switch-container{
+    color: $DarkGrayishBlue;
+  }
+}

@@ -10,7 +10,6 @@
 }
 
 .stat-card {
-    background-color: $DT_DarkDesaturatedBlue;
     max-width: 250px;
     height: 215px;
     margin-bottom: 2em;
@@ -52,7 +51,7 @@
 
         .username {
             @include setFlex(row, center, space-between, nowrap);
-            color: $DT_DesaturatedBlue;
+
             font-weight: 800;
 
             .social-icon {
@@ -62,13 +61,12 @@
 
         .followers-cantity {
             font-size: 48px;
-            color: $DT_White;
             font-weight: 700;
         }
 
         .followers-title {
-            letter-spacing: 4px;
-            color: $DT_DesaturatedBlue;
+            letter-spacing: 3px;
+            font-weight: 700;
         }
 
         .followers-status {

@@ -1,0 +1,46 @@
+#dark {
+  // MAIN BG
+  background-color: $DT_VeryDarkBlueBG;
+
+  // OVERVIEW SECTION STYLES
+  h2.overview-container-title {
+    color: $DT_White;
+  }
+  .overview-card-container {
+    .overview-card {
+      background-color: $DT_DarkDesaturatedBlue;
+      .row {
+        .stat-name {
+          color: $DT_DesaturatedBlue;
+        }
+        .stat-number {
+          color: $DT_White;
+        }
+      }
+    }
+  }
+  .stat-card {
+    background-color: $DT_DarkDesaturatedBlue;
+    .content {
+      .username,
+      .followers-title {
+        color: $DT_White;
+      }
+      .followers-cantity {
+        color: $DT_White;
+      }
+    }
+  }
+
+  .overview-card {
+    background-color: $DT_DarkDesaturatedBlue;
+    .row {
+      .stat-name {
+        color: $DT_DesaturatedBlue;
+      }
+      .stat-number {
+        color: $DT_White;
+      }
+    }
+  }
+}

@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react"
 import "../sass/main.css";
+import "../App.js";
 
 
-function Header() {
+function Header({ changeEvent, checkedValue }) {
     const [size, setSize] = useState({
         width: window.innerWidth
     })
@@ -27,7 +28,7 @@ function Header() {
                 <div className="theme-switch-container">
                     <span className="dark-mode">Dark Mode</span>
                     <label className="switch">
-                        <input type="checkbox"></input>
+                        <input type="checkbox" onChange={changeEvent} checked={checkedValue} ></input>
                         <span className="slider round"></span>
                     </label>
                 </div>
@@ -35,16 +36,16 @@ function Header() {
         </header>
         );
     } else {
-        return (    <header className="mobile-header">
+        return (<header className="mobile-header">
         <h1>Social Media Dashboard</h1>
         <p className="mobile-total-followers">Total Followers: 23,004</p>
         <hr className="mobile-header-div-bar"></hr>
         <div className="theme-switch-container">
           <span className="dark-mode">Dark Mode</span>
           <label className="switch">
-            <input type="checkbox"></input>
-            <span className="slider round"></span>
-          </label>
+                        <input type="checkbox" onChange={changeEvent} checked={checkedValue} ></input>
+                        <span className="slider round"></span>
+                    </label>
         </div>
       </header>);
     }
